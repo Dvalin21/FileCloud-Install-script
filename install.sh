@@ -6,7 +6,7 @@ sudo echo "deb [ arch=amd64 signed-by=/usr/share/keyrings/filecloud.gpg ] https:
 
 sudo apt-get update
 sudo apt-get install apache2 mongodb-org pigz -y
-sudo a2enmod rewrite
+sudo a2enmod mpm_worker rewrite
 sudo systemctl restart apache2
 sudo apt install -y --no-install-recommends php8.2*
 sudo ACCEPT_EULA=Y  apt-get install filecloud -y
